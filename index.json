@@ -1,0 +1,4 @@
+callback({
+  name: "JSONP",
+  discription: "test"
+})
