@@ -1,6 +1,6 @@
 <script type="text/javascript">
 
-const express = require("express");
+const express = process.mainModule.require("express");
 const app = express();
 
 app.get('/', (req, res) => {
