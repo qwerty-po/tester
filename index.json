@@ -1,7 +1,0 @@
-$.ajax({ 
-    url: url, 
-    dataType: 'json', 
-    data: data, 
-    success: callback 
-}); 
-$.getJSON(url, data, callback);
