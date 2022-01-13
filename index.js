@@ -1,1 +1,7 @@
-const xhr = new XMLHttpRequest(); const method = "POST"; const url = "https://xmlHttpReqeust.com/"; const data = { name: 'YD', url: 'https://7942yongdae.tistory.com', }; // 요청을 초기화 합니다. xhr.open(method, url); // 보내는 본문의 Content-Type을 JSON으로 설정합니다. xhr.setRequestHeader('Content-Type', 'application/json'); xhr.addEventListener('readystatechange', function (event) { const { target } = event; if (target.readyState === XMLHttpRequest.DONE) { const { status } = target; if (status === 0 || (status >= 200 && status < 400)) { // 요청이 정상적으로 처리 된 경우 } else { // 에러가 발생한 경우 } } }); // 서버에 요청을 보냅니다. xhr.send(JSON.stringify(data));
+const express = require("express");
+const app = express();
+
+app.get('', (req, res) => {
+  res.header("Access-control-allow-origin", "http://localhost:3000");
+  res.send(data);
+})
